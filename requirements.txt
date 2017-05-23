@@ -1,5 +1,5 @@
 flasgger
 flask
 gevent
-gunicorn
+gunicorn==19.7.1
 flask-httpauth
