@@ -1,4 +1,5 @@
 flasgger
 flask
 gevent
+gunicorn
 flask-httpauth
