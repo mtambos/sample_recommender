@@ -8,7 +8,7 @@ import json
 from flask import Flask, request, jsonify
 from flasgger import Swagger
 from flask_httpauth import HTTPBasicAuth
-from gevent import wsgi
+
 
 app = Flask(__name__, static_folder=os.path.join(os.getcwd(), 'static'))
 app.config['SWAGGER'] = {
@@ -111,5 +111,5 @@ def index():
 
 
 if __name__ == '__main__':
-    server = wsgi.WSGIServer(('0.0.0.0', 80), app)
-    server.serve_forever()
+    app.run(debug=True)
+
